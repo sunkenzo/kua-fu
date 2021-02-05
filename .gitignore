@@ -1,0 +1,14 @@
+.DS_Store
+build/
+out/
+**/httpRequests/
+.gradle/
+.cache/
+.idea*/
+~$*
+*.iml
+*.ipr
+*.iws
+*.log
+dataSources/
+.ideaDataSources/
