@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.2.9.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+}
+
+group 'com.mini'
+version 'V1.1'
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
+    mavenCentral()
+    jcenter()
+    maven { url "https://raw.githubusercontent.com/xingePush/maven-repository/release/" }
+    maven { url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/" }
+    maven {
+        url "https://nexus.risafety.com/repository/maven-releases/"
+        credentials {
+            username "public"
+            password "XyOVEWDunNExsHEd"
+        }
+    }
+}
+
+dependencies {
+    implementation(
+            "org.springframework.boot:spring-boot-starter",
+            "org.springframework.boot:spring-boot-starter-web",
+            "org.springframework.boot:spring-boot-starter-data-redis",
+
+            "com.baomidou:mybatis-plus-boot-starter:3.4.0",
+
+            "org.apache.commons:commons-lang3:3.9",
+            "org.apache.commons:commons-pool2:2.8.1",
+
+            "com.google.guava:guava:28.2-jre"
+    )
+
+    runtimeOnly(
+            "mysql:mysql-connector-java",
+    )
+
+    testImplementation(
+            "org.springframework.boot:spring-boot-starter-test",
+    )
+}

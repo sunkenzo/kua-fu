@@ -1,0 +1,37 @@
+ext.versions = [
+        jackson : '2.10.1',
+        retrofit: '2.7.0',
+        protobuf: '3.11.1',
+        grpc    : '1.26.0',
+        devh    : '2.6.2.RELEASE',
+        sba     : '2.2.1',
+        zxing   : '3.4.0',
+        activiti: '7.0.0.GA',
+]
+
+ext.libraries = [
+        sb_core               : "org.springframework.boot:spring-boot-starter",
+        sb_web                : "org.springframework.boot:spring-boot-starter-web",
+        sb_redis              : "org.springframework.boot:spring-boot-starter-data-redis",
+        sb_test               : "org.springframework.boot:spring-boot-starter-test",
+        sb_grpc_server        : "net.devh:grpc-server-spring-boot-starter:${versions.devh}",
+        sb_grpc_client        : "net.devh:grpc-client-spring-boot-starter:${versions.devh}",
+        spring_statemachine   : "org.springframework.statemachine:spring-statemachine-core:2.2.0.RELEASE",
+        spring_aop            : "org.springframework:spring-aop:5.3.0",
+        mysql                 : "mysql:mysql-connector-java",
+        guava                 : "com.google.guava:guava:28.2-jre",
+        commons_lang          : "org.apache.commons:commons-lang3:3.9",
+        commons_pool          : "org.apache.commons:commons-pool2:2.8.1",
+        jackson_core          : "com.fasterxml.jackson.core:jackson-core:${versions.jackson}",
+        jackson_databind      : "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}",
+        jackson_jsr310        : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${versions.jackson}",
+        jackson_dataformat_xml: "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${versions.jackson}",
+        retrofit              : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+        retrofit_jackson      : "com.squareup.retrofit2:converter-jackson:${versions.retrofit}",
+        quartz                : "org.quartz-scheduler:quartz:2.3.2",
+        hibernate_validator   : 'org.hibernate.validator:hibernate-validator:6.1.0.Final',
+        apache_poi            : "org.apache.poi:poi:4.1.1",
+        apache_poi_ooxml      : "org.apache.poi:poi-ooxml:4.1.1:",
+        easyexcel             : "com.alibaba:easyexcel:2.1.6",
+]
+
