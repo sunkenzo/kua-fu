@@ -2,7 +2,7 @@ spring:
   application:
     name: kua-fu
   profiles:
-    active: prod
+    active: default
 
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/kua_fu?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL
@@ -53,6 +53,12 @@ management:
     web:
       exposure:
         include: '*'
+
+mybatis:
+  type-aliases-package: com.mini.kuafu.service.**.domain
+  mapper-locations: classpath*:com/mini/kuafu/service/**/dao/xml/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
 
 logging:
   level:

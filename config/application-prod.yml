@@ -54,6 +54,12 @@ management:
       exposure:
         include: '*'
 
+mybatis:
+  type-aliases-package: com.mini.kuafu.model.entity
+  mapper-locations: classpath*:com/mini/kuafu/dao/**/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
 logging:
   level:
     org.springframework.jdbc.core: DEBUG
