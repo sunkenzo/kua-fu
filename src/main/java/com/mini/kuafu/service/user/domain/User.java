@@ -5,8 +5,8 @@ import com.mini.kuafu.service.config.Tables;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Setter
 @Getter
@@ -16,15 +16,33 @@ public class User {
     @TableId(value = "id", type = IdType.ASSIGN_ID)
     private Long id;
 
-    @NotNull
+    private String account;
+
     private String userName;
+
+    private String password;
+
+    private LocalDate birthday;
 
     @TableLogic
     private Short deleted;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @TableField(update = "now()")
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", account='" + account + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", birthday=" + birthday +
+                ", deleted=" + deleted +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }
