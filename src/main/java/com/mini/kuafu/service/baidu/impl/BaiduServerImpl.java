@@ -88,8 +88,8 @@ public class BaiduServerImpl implements BaiduServer {
         }
         log.info("{}", baiDuTranslationResponse);
 
-        if (baiDuTranslationResponse.getError_code() != null) {
-            log.warn("translation invoke error : {}", baiDuTranslationResponse.getError_code());
+        if (baiDuTranslationResponse.getErrorCode() != null) {
+            log.warn("translation invoke error : {}", baiDuTranslationResponse.getErrorCode());
             return baiDuTranslationResponse;
         }
 
