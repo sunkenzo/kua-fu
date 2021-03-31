@@ -5,6 +5,8 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 /**
+ * 验证码图片
+ *
  * @author kenzo
  * @create 2021-03-30 13:49
  */
