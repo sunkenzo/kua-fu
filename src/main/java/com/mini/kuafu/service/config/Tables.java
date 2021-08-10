@@ -5,5 +5,5 @@ package com.mini.kuafu.service.config;
  * @create 2021-02-05 13:01
  */
 public interface Tables {
-    String USER = "tb_user";
+    String USER = "ts_user";
 }

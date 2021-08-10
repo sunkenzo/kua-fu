@@ -15,6 +15,7 @@ public final class EncryptUtil {
             return mobile;
         }
 
-        return StringUtils.replaceAll(mobile, "(\\d{3})\\d{4}(\\d{4})", "$1****$2");
+        //return StringUtils.replaceAll(mobile, "(\\d{3})\\d{4}(\\d{4})", "$1****$2");
+        return mobile.replaceAll("(\\d{3})\\d{4}(\\d{4})", "$1****$2");
     }
 }
