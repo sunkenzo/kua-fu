@@ -15,7 +15,7 @@ public class AuthApi {
     static final String PATH = "/auth/login";
 
     @Resource
-    private AuthService authService;
+    private final AuthService authService;
 
     public AuthApi(AuthService authService) {
         this.authService = authService;
